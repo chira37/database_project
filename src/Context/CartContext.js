@@ -28,8 +28,10 @@ function CartContextProvider (props) {
                 Image: product.Image
             }
             console.log(obj);
-            setCartProducts([...cartProducts, obj])
+            setCartProducts(previousState=> [...previousState, obj])
         })
+        
+        
         
         console.log(cartProducts);
     }
